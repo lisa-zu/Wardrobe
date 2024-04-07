@@ -22,7 +22,12 @@ struct WardrobeApp: App {
     @StateObject private var authService: AuthService = AuthService()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch authService.userIsSignedIn {
+            case true:
+                ContentView()
+            case false:
+                LoginView()
+            }
         }
     }
 }
