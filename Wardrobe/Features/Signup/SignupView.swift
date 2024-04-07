@@ -90,7 +90,7 @@ struct SignupView: View {
             }, label: {
                 HStack {
                     Spacer()
-                    Text(LocalizedStringKey(stringLiteral: "LOGIN"))
+                    Text(LocalizedStringKey(stringLiteral: "SIGNUP"))
                     Spacer()
                 }
             })

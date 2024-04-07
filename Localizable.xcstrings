@@ -2,7 +2,14 @@
   "sourceLanguage" : "de",
   "strings" : {
     "Hello, world!" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : ""
+          }
+        }
+      }
     },
     "LOGIN" : {
       "extractionState" : "manual",
@@ -102,6 +109,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "back!"
+          }
+        }
+      }
+    },
+    "SIGNUP" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account erstellen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up"
           }
         }
       }
