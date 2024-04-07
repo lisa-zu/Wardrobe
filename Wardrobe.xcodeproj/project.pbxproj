@@ -26,6 +26,7 @@
 		3060F1522BC2B07300C78882 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1512BC2B07300C78882 /* LoginView.swift */; };
 		3060F1542BC2B68800C78882 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3060F1532BC2B68800C78882 /* Localizable.xcstrings */; };
 		3060F1572BC2B8F400C78882 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1562BC2B8F400C78882 /* Color.swift */; };
+		3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1592BC2BE2700C78882 /* SignupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		3060F1512BC2B07300C78882 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3060F1532BC2B68800C78882 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3060F1562BC2B8F400C78882 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		3060F1592BC2BE2700C78882 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		3060F14F2BC2B06100C78882 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3060F1582BC2BE1A00C78882 /* Signup */,
 				3060F1502BC2B06600C78882 /* Login */,
 			);
 			path = Features;
@@ -186,6 +189,14 @@
 				3060F1562BC2B8F400C78882 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3060F1582BC2BE1A00C78882 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+				3060F1592BC2BE2700C78882 /* SignupView.swift */,
+			);
+			path = Signup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */,
 				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
