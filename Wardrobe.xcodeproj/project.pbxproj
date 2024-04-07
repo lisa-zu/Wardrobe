@@ -25,6 +25,7 @@
 		3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F14D2BC2AE2F00C78882 /* AuthService.swift */; };
 		3060F1522BC2B07300C78882 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1512BC2B07300C78882 /* LoginView.swift */; };
 		3060F1542BC2B68800C78882 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3060F1532BC2B68800C78882 /* Localizable.xcstrings */; };
+		3060F1572BC2B8F400C78882 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1562BC2B8F400C78882 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		3060F14D2BC2AE2F00C78882 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		3060F1512BC2B07300C78882 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3060F1532BC2B68800C78882 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		3060F1562BC2B8F400C78882 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		3060F10B2BC2A73D00C78882 /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				3060F1552BC2B8EC00C78882 /* Extensions */,
 				3060F14F2BC2B06100C78882 /* Features */,
 				3060F14B2BC2AE1F00C78882 /* Services */,
 				3060F13A2BC2A97200C78882 /* GoogleService-Info.plist */,
@@ -175,6 +178,14 @@
 				3060F1512BC2B07300C78882 /* LoginView.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		3060F1552BC2B8EC00C78882 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3060F1562BC2B8F400C78882 /* Color.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +336,7 @@
 				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
+				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
 				3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
