@@ -12,6 +12,7 @@ struct LoginView: View {
     @EnvironmentObject var authService: AuthService
     @State private var mail: String = ""
     @State private var password: String = ""
+    var scrollProxy: ScrollViewProxy
     
     var body: some View {
         VStack {
@@ -88,6 +89,20 @@ struct LoginView: View {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(Color.wardrobePrimary)
             }
+            .padding(.bottom, 32)
+            
+            HStack {
+                Text(LocalizedStringKey(stringLiteral: "LOGIN_SIGNUP_MESSAGE"))
+                    .font(.system(.callout, design: .rounded, weight: .regular))
+                Button(action: {
+                    withAnimation {
+                        scrollProxy.scrollTo("signup")
+                    }
+                }, label: {
+                    Text(LocalizedStringKey(stringLiteral: "LOGIN_SIGNUP_BUTTON"))
+                        .font(.system(.callout, design: .rounded, weight: .regular))
+                })
+            }
             
             Spacer()
         }
@@ -96,5 +111,7 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView()
+    ScrollViewReader { context in
+        LoginView(scrollProxy: context)
+    }
 }
