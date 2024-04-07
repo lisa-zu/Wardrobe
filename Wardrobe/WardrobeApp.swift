@@ -19,6 +19,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WardrobeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var authService: AuthService = AuthService()
     var body: some Scene {
         WindowGroup {
             ContentView()

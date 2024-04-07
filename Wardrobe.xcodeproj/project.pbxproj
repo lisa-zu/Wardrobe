@@ -22,6 +22,7 @@
 		3060F1462BC2AADB00C78882 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3060F1452BC2AADB00C78882 /* FirebaseFirestoreSwift */; };
 		3060F1482BC2AADB00C78882 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 3060F1472BC2AADB00C78882 /* FirebasePerformance */; };
 		3060F14A2BC2AADB00C78882 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3060F1492BC2AADB00C78882 /* FirebaseStorage */; };
+		3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F14D2BC2AE2F00C78882 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3060F1272BC2A73E00C78882 /* WardrobeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeUITests.swift; sourceTree = "<group>"; };
 		3060F1292BC2A73E00C78882 /* WardrobeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3060F13A2BC2A97200C78882 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3060F14D2BC2AE2F00C78882 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		3060F10B2BC2A73D00C78882 /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				3060F14B2BC2AE1F00C78882 /* Services */,
 				3060F13A2BC2A97200C78882 /* GoogleService-Info.plist */,
 				3060F10C2BC2A73D00C78882 /* WardrobeApp.swift */,
 				3060F10E2BC2A73D00C78882 /* ContentView.swift */,
@@ -142,6 +145,14 @@
 				3060F1292BC2A73E00C78882 /* WardrobeUITestsLaunchTests.swift */,
 			);
 			path = WardrobeUITests;
+			sourceTree = "<group>";
+		};
+		3060F14B2BC2AE1F00C78882 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3060F14D2BC2AE2F00C78882 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
 				3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */,
 			);
