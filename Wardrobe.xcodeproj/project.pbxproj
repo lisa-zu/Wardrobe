@@ -27,6 +27,8 @@
 		3060F1542BC2B68800C78882 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 3060F1532BC2B68800C78882 /* Localizable.xcstrings */; };
 		3060F1572BC2B8F400C78882 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1562BC2B8F400C78882 /* Color.swift */; };
 		3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F1592BC2BE2700C78882 /* SignupView.swift */; };
+		3060F15C2BC2C08700C78882 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F15B2BC2C08700C78882 /* SignupViewModel.swift */; };
+		3060F15F2BC2C7F700C78882 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F15E2BC2C7F700C78882 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		3060F1532BC2B68800C78882 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3060F1562BC2B8F400C78882 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		3060F1592BC2BE2700C78882 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		3060F15B2BC2C08700C78882 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		3060F15E2BC2C7F700C78882 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,7 @@
 		3060F14F2BC2B06100C78882 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3060F15D2BC2C79000C78882 /* Auth */,
 				3060F1582BC2BE1A00C78882 /* Signup */,
 				3060F1502BC2B06600C78882 /* Login */,
 			);
@@ -195,8 +200,17 @@
 			isa = PBXGroup;
 			children = (
 				3060F1592BC2BE2700C78882 /* SignupView.swift */,
+				3060F15B2BC2C08700C78882 /* SignupViewModel.swift */,
 			);
 			path = Signup;
+			sourceTree = "<group>";
+		};
+		3060F15D2BC2C79000C78882 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				3060F15E2BC2C7F700C78882 /* AuthView.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +361,10 @@
 				3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */,
 				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
+				3060F15C2BC2C08700C78882 /* SignupViewModel.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
 				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
+				3060F15F2BC2C7F700C78882 /* AuthView.swift in Sources */,
 				3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
