@@ -27,7 +27,7 @@ struct WardrobeApp: App {
                 ContentView()
                     .environmentObject(authService)
             case false:
-                LoginView()
+                AuthView()
                     .environmentObject(authService)
             }
         }
