@@ -9,9 +9,13 @@ import SwiftUI
 
 struct SignupView: View {
     
+    @StateObject private var viewModel: SignupViewModel = SignupViewModel()
     @EnvironmentObject var authService: AuthService
     @State private var mail: String = ""
     @State private var password: String = ""
+    @State private var passwordValid: String = ""
+    
+    var scrollProxy: ScrollViewProxy
     
     var body: some View {
         VStack {
@@ -40,12 +44,19 @@ struct SignupView: View {
                         .frame(width: 32)
                     TextField("LOGIN_MAIL_PLACEHOLDER", text: $mail)
                         .keyboardType(.emailAddress)
+                        .onSubmit {
+                            viewModel.isValidEmail(mail)
+                        }
                 }
                 .padding()
                 .background {
                     RoundedRectangle(cornerRadius: 16)
                         .fill(Color.clear)
                         .stroke(Color.wardrobeSecondary, lineWidth: 1.0)
+                }
+                
+                if viewModel.mailIsValid != nil && !viewModel.mailIsValid! {
+                    Text(LocalizedStringKey(stringLiteral: "INVALID_EMAIL"))
                 }
                 
                 HStack {
@@ -65,7 +76,7 @@ struct SignupView: View {
                     Image(systemName: "exclamationmark.lock")
                         .foregroundStyle(Color.wardrobePrimary)
                         .frame(width: 32)
-                    SecureField("SIGNUP_PASSWORD_VALIDATE_PLACEHOLDER", text: $password)
+                    SecureField("SIGNUP_PASSWORD_VALIDATE_PLACEHOLDER", text: $passwordValid)
                 }
                 .padding()
                 .background {
@@ -101,6 +112,21 @@ struct SignupView: View {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(Color.wardrobePrimary)
             }
+            .disabled(viewModel.signUpDisalbed)
+            .padding(.bottom, 32)
+            
+            HStack {
+                Text(LocalizedStringKey(stringLiteral: "SIGNUP_LOGIN_MESSAGE"))
+                    .font(.system(.callout, design: .rounded, weight: .regular))
+                Button(action: {
+                    withAnimation {
+                        scrollProxy.scrollTo("login")
+                    }
+                }, label: {
+                    Text(LocalizedStringKey(stringLiteral: "SIGNUP_LOGIN_BUTTON"))
+                        .font(.system(.callout, design: .rounded, weight: .regular))
+                })
+            }
             
             Spacer()
             
@@ -110,5 +136,7 @@ struct SignupView: View {
 }
 
 #Preview {
-    SignupView()
+    ScrollViewReader { context in
+        SignupView(scrollProxy: context)
+    }
 }
