@@ -105,6 +105,86 @@
           }
         }
       }
+    },
+    "SIGNUP_GREETING_MESSAGE" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstelle einen Account um deine Outfits online zu verwalten und Vorschläge zu erhalten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign up to manage your wardrobe and get outfit suggestions."
+          }
+        }
+      }
+    },
+    "SIGNUP_PASSWORD_PLACEHOLDER" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstelle ein Passwort"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Create password"
+          }
+        }
+      }
+    },
+    "SIGNUP_PASSWORD_VALIDATE_PLACEHOLDER" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gib dein Passwort erneut ein"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Re-type your password"
+          }
+        }
+      }
+    },
+    "SIGNUP_TITLE_1" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hi"
+          }
+        }
+      }
+    },
+    "SIGNUP_TITLE_2" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fremde:r!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "stranger!"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
