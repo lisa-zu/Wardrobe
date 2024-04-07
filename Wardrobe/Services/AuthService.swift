@@ -42,14 +42,12 @@ extension AuthService {
             }
         }
     }
-    func logoutEPAccount(email: String, password: String, completion: @escaping((Error?) -> Void)) {
-        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-            do {
-                try Auth.auth().signOut()
-                completion(nil)
-            } catch let signOutError as NSError {
-                completion(signOutError)
-            }
+    func logoutEPAccount(completion: @escaping((Error?) -> Void)) {
+        do {
+            try Auth.auth().signOut()
+            completion(nil)
+        } catch let signOutError as NSError {
+            completion(signOutError)
         }
     }
 }
