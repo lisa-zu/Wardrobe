@@ -25,8 +25,10 @@ struct WardrobeApp: App {
             switch authService.userIsSignedIn {
             case true:
                 ContentView()
+                    .environmentObject(authService)
             case false:
                 LoginView()
+                    .environmentObject(authService)
             }
         }
     }
