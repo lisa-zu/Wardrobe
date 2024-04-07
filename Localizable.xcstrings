@@ -11,6 +11,23 @@
         }
       }
     },
+    "INVALID_EMAIL" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ungültige Email-Adresse"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Invalid email address"
+          }
+        }
+      }
+    },
     "LOGIN" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -79,6 +96,40 @@
         }
       }
     },
+    "LOGIN_SIGNUP_BUTTON" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier lang!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Follow me!"
+          }
+        }
+      }
+    },
+    "LOGIN_SIGNUP_MESSAGE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Noch nicht registriert?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not sign up yet?"
+          }
+        }
+      }
+    },
     "LOGIN_TITLE_1" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -113,6 +164,22 @@
         }
       }
     },
+    "LOGOUT" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abmelden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Logout"
+          }
+        }
+      }
+    },
     "SIGNUP" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -142,6 +209,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sign up to manage your wardrobe and get outfit suggestions."
+          }
+        }
+      }
+    },
+    "SIGNUP_LOGIN_BUTTON" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mir nach!"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Follow me!"
+          }
+        }
+      }
+    },
+    "SIGNUP_LOGIN_MESSAGE" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hast du bereits einen Account?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Already have an account?"
           }
         }
       }
