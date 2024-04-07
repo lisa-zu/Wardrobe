@@ -19,20 +19,50 @@ struct LoginView: View {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(LocalizedStringKey(stringLiteral: "LOGIN_TITLE_1"))
                     Text(LocalizedStringKey(stringLiteral: "LOGIN_TITLE_2"))
-                        .foregroundStyle(Color(red: 221/255, green: 43/255, blue: 133/255))
+                        .foregroundStyle(Color.wardrobePrimary)
                 }
                 .font(.system(.largeTitle, design: .rounded, weight: .bold))
                 Spacer()
             }
             .padding(.bottom)
             
-            Text(LocalizedStringKey(stringLiteral: "LOGIN_GREETING_MESSAGE"))
-                .font(.system(.callout, design: .rounded, weight: .regular))
-            Group {
-                TextField("LOGIN_MAIL_PLACEHOLDER", text: $mail)
-                    .keyboardType(.emailAddress)
-                SecureField("LOGIN_PASSWORD_PLACEHOLDER", text: $password)
+            HStack {
+                Text(LocalizedStringKey(stringLiteral: "LOGIN_GREETING_MESSAGE"))
+                    .font(.system(.callout, design: .rounded, weight: .regular))
+                    .foregroundStyle(Color.wardrobeSecondary)
+                Spacer()
             }
+            
+            VStack {
+                HStack {
+                    Image(systemName: "envelope")
+                        .foregroundStyle(Color.wardrobePrimary)
+                        .frame(width: 32)
+                    TextField("LOGIN_MAIL_PLACEHOLDER", text: $mail)
+                        .keyboardType(.emailAddress)
+                }
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.clear)
+                        .stroke(Color.wardrobeSecondary, lineWidth: 1.0)
+                }
+                
+                HStack {
+                    Image(systemName: "exclamationmark.lock")
+                        .foregroundStyle(Color.wardrobePrimary)
+                        .frame(width: 32)
+                    SecureField("LOGIN_PASSWORD_PLACEHOLDER", text: $password)
+                }
+                .padding()
+                .background {
+                    RoundedRectangle(cornerRadius: 16)
+                        .fill(Color.clear)
+                        .stroke(Color.wardrobeSecondary, lineWidth: 1.0)
+                }
+            }
+            .padding(.top, 16)
+            .padding(.bottom, 32)
             
             Button(action: {
                 authService.loginEPAccount(email: mail, password: password) { result in
@@ -45,8 +75,19 @@ struct LoginView: View {
                     }
                 }
             }, label: {
-                Text(LocalizedStringKey(stringLiteral: "LOGIN"))
+                HStack {
+                    Spacer()
+                    Text(LocalizedStringKey(stringLiteral: "LOGIN"))
+                    Spacer()
+                }
             })
+            .buttonStyle(.plain)
+            .padding()
+            .foregroundStyle(.white)
+            .background {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.wardrobePrimary)
+            }
             
             Spacer()
         }
