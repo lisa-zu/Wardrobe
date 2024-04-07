@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    "Hello, world!" : {
+
+    },
     "LOGIN" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -41,7 +44,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gib hier deine Email ein"
+            "value" : "Gib deine Email ein"
           }
         },
         "en" : {
@@ -58,7 +61,7 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gib hier dein Passwort ein"
+            "value" : "Gib dein Passwort ein"
           }
         },
         "en" : {
