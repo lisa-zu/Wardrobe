@@ -44,9 +44,6 @@ struct SignupView: View {
                         .frame(width: 32)
                     TextField("LOGIN_MAIL_PLACEHOLDER", text: $mail)
                         .keyboardType(.emailAddress)
-                        .onSubmit {
-                            viewModel.isValidEmail(mail)
-                        }
                 }
                 .padding()
                 .background {
@@ -132,6 +129,18 @@ struct SignupView: View {
             
         }
         .padding()
+        .onChange(of: password) { oldValue, newValue in
+            viewModel.isEqualPassword(password, check: passwordValid)
+            viewModel.validateSignupForm()
+        }
+        .onChange(of: passwordValid) { oldValue, newValue in
+            viewModel.isEqualPassword(password, check: passwordValid)
+            viewModel.validateSignupForm()
+        }
+        .onChange(of: mail) { oldValue, newValue in
+            viewModel.isValidEmail(mail)
+            viewModel.validateSignupForm()
+        }
     }
 }
 

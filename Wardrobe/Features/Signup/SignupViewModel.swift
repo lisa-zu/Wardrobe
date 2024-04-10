@@ -10,11 +10,20 @@ import Foundation
 class SignupViewModel: ObservableObject {
     @Published var signUpDisalbed: Bool = true
     @Published var mailIsValid: Bool?
+    @Published var passwordIsValid: Bool?
 }
 
 extension SignupViewModel {
-    func validateSignupForm(mail: String, password: String, passwordValid: String) {
-        
+    func validateSignupForm() {
+        if let mailIsValid = mailIsValid, let passwordIsValid = passwordIsValid {
+            if mailIsValid == true && passwordIsValid == true {
+                self.signUpDisalbed = false
+            }
+        }
+    }
+    
+    func isEqualPassword(_ password: String, check passwordCheck: String) {
+        self.passwordIsValid = password == passwordCheck
     }
     
     func isValidEmail(_ email: String) {
