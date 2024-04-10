@@ -12,20 +12,13 @@ struct ContentView: View {
     @EnvironmentObject var authService: AuthService
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Button(action: {
-                authService.logoutEPAccount { error in
-                    debugPrint(error?.localizedDescription)
+        TabView {
+            SettingsView()
+                .environmentObject(authService)
+                .tabItem {
+                    Label("TAB_SETTINGS", systemImage: "gear")
                 }
-            }, label: {
-                Text("LOGOUT")
-            })
         }
-        .padding()
     }
 }
 
