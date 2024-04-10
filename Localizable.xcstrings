@@ -1,7 +1,11 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    "Account löschen" : {
+
+    },
     "Hello, world!" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -165,6 +169,7 @@
       }
     },
     "LOGOUT" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -223,7 +228,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Follow me!"
           }
         }
@@ -305,6 +310,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "stranger!"
+          }
+        }
+      }
+    },
+    "TAB_SETTINGS" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
           }
         }
       }
