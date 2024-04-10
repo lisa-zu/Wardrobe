@@ -50,4 +50,15 @@ extension AuthService {
             completion(signOutError)
         }
     }
+    func deleteAccount(completion: @escaping((Error?) -> Void)) {
+        let user = Auth.auth().currentUser
+
+        user?.delete { error in
+          if let error = error {
+            completion(error)
+          } else {
+            completion(nil)
+          }
+        }
+    }
 }
