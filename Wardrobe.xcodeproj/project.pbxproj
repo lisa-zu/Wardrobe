@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009E3C22BC42F7A00A1F827 /* SettingsView.swift */; };
+		304E4DA42BC6D7BF00C611D7 /* Features.plist in Resources */ = {isa = PBXBuildFile; fileRef = 304E4DA32BC6D7BF00C611D7 /* Features.plist */; };
+		304E4DA62BC6D80300C611D7 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E4DA52BC6D80300C611D7 /* FeatureFlags.swift */; };
+		304E4DA92BC6D8BF00C611D7 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E4DA82BC6D8BF00C611D7 /* Features.swift */; };
 		3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F10C2BC2A73D00C78882 /* WardrobeApp.swift */; };
 		3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060F10E2BC2A73D00C78882 /* ContentView.swift */; };
 		3060F1112BC2A73E00C78882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3060F1102BC2A73E00C78882 /* Assets.xcassets */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3009E3C22BC42F7A00A1F827 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		304E4DA32BC6D7BF00C611D7 /* Features.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Features.plist; sourceTree = "<group>"; };
+		304E4DA52BC6D80300C611D7 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
+		304E4DA82BC6D8BF00C611D7 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
 		3060F1092BC2A73D00C78882 /* Wardrobe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wardrobe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3060F10C2BC2A73D00C78882 /* WardrobeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeApp.swift; sourceTree = "<group>"; };
 		3060F10E2BC2A73D00C78882 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3009E3C12BC42F6E00A1F827 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3009E3C22BC42F7A00A1F827 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		304E4DA72BC6D8B700C611D7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				304E4DA82BC6D8BF00C611D7 /* Features.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		3060F1002BC2A73D00C78882 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +149,7 @@
 		3060F10B2BC2A73D00C78882 /* Wardrobe */ = {
 			isa = PBXGroup;
 			children = (
+				304E4DA72BC6D8B700C611D7 /* Models */,
 				3060F1552BC2B8EC00C78882 /* Extensions */,
 				3060F14F2BC2B06100C78882 /* Features */,
 				3060F14B2BC2AE1F00C78882 /* Services */,
@@ -133,6 +158,7 @@
 				3060F10E2BC2A73D00C78882 /* ContentView.swift */,
 				3060F1102BC2A73E00C78882 /* Assets.xcassets */,
 				3060F1122BC2A73E00C78882 /* Preview Content */,
+				304E4DA32BC6D7BF00C611D7 /* Features.plist */,
 			);
 			path = Wardrobe;
 			sourceTree = "<group>";
@@ -173,9 +199,11 @@
 		3060F14F2BC2B06100C78882 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				3009E3C12BC42F6E00A1F827 /* Settings */,
 				3060F15D2BC2C79000C78882 /* Auth */,
 				3060F1582BC2BE1A00C78882 /* Signup */,
 				3060F1502BC2B06600C78882 /* Login */,
+				304E4DA52BC6D80300C611D7 /* FeatureFlags.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -334,6 +362,7 @@
 				3060F13B2BC2A97200C78882 /* GoogleService-Info.plist in Resources */,
 				3060F1542BC2B68800C78882 /* Localizable.xcstrings in Resources */,
 				3060F1112BC2A73E00C78882 /* Assets.xcassets in Resources */,
+				304E4DA42BC6D7BF00C611D7 /* Features.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +390,14 @@
 				3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */,
 				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
+				3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */,
+				304E4DA62BC6D80300C611D7 /* FeatureFlags.swift in Sources */,
 				3060F15C2BC2C08700C78882 /* SignupViewModel.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
 				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
 				3060F15F2BC2C7F700C78882 /* AuthView.swift in Sources */,
 				3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */,
+				304E4DA92BC6D8BF00C611D7 /* Features.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
