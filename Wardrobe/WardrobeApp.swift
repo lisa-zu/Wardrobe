@@ -19,9 +19,28 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct WardrobeApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var authService: AuthService = AuthService()
+    @StateObject private var features: FeatureFlags = FeatureFlags()
+    
     var body: some Scene {
         WindowGroup {
+            if let loginRequired = features.features?.loginRequired {
+                if loginRequired {
+                    switch authService.userIsSignedIn {
+                    case true:
+                        ContentView()
+                            .environmentObject(authService)
+                    case false:
+                        AuthView()
+                            .environmentObject(authService)
+                    }
+                } else {
+                    ContentView()
+                        .environmentObject(authService)
+                }
+            }
             ContentView()
+                .environmentObject(authService)
         }
     }
 }
