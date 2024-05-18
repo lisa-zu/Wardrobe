@@ -121,9 +121,6 @@
         }
       }
     },
-    "Login" : {
-
-    },
     "LOGIN" : {
       "extractionState" : "manual",
       "localizations" : {
