@@ -88,7 +88,7 @@ struct SignupView: View {
             Button(action: {
                 authService.createEPAccount(email: mail, password: password) { result in
                     switch result {
-                    case .success(let user):
+                    case .success( _):
                         // do something?
                         break
                     case .failure(let error):

@@ -24,23 +24,14 @@ struct WardrobeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if let loginRequired = features.features?.loginRequired {
-                if loginRequired {
-                    switch authService.userIsSignedIn {
-                    case true:
-                        ContentView()
-                            .environmentObject(authService)
-                    case false:
-                        AuthView()
-                            .environmentObject(authService)
-                    }
-                } else {
-                    ContentView()
-                        .environmentObject(authService)
-                }
+            switch authService.userIsSignedIn {
+            case true:
+                ContentView()
+                    .environmentObject(authService)
+            case false:
+                AuthView()
+                    .environmentObject(authService)
             }
-            ContentView()
-                .environmentObject(authService)
         }
     }
 }

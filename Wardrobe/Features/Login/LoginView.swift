@@ -68,7 +68,7 @@ struct LoginView: View {
             Button(action: {
                 authService.loginEPAccount(email: mail, password: password) { result in
                     switch result {
-                    case .success(let user):
+                    case .success( _):
                         // do something?
                         break
                     case .failure(let error):

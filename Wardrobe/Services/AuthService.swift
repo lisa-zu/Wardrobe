@@ -10,10 +10,13 @@ import FirebaseAuth
 
 class AuthService: ObservableObject {
     @Published var userIsSignedIn: Bool = false
+    @Published var user: User? = nil
+    
     init() {
         Auth.auth().addStateDidChangeListener { auth, user in
-            if user != nil {
+            if let loggedInUser = user {
                 self.userIsSignedIn = true
+                self.user = User(name: loggedInUser.displayName, email: loggedInUser.email)
             } else {
                 self.userIsSignedIn = false
             }
@@ -28,7 +31,7 @@ extension AuthService {
                 completion(.failure(error))
             }
             if let user = authResult?.user {
-                completion(.success(user))
+                completion(.success(User(name: user.displayName, email: user.email)))
             }
         }
     }
@@ -38,7 +41,7 @@ extension AuthService {
                 completion(.failure(error))
             }
             if let user = authResult?.user {
-                completion(.success(user))
+                completion(.success(User(name: user.displayName, email: user.email)))
             }
         }
     }
@@ -59,6 +62,26 @@ extension AuthService {
           } else {
             completion(nil)
           }
+        }
+    }
+}
+
+extension AuthService {
+    func updateUserPassword(to password: String, completion: @escaping ((Error?) -> Void)) {
+        Auth.auth().currentUser?.updatePassword(to: password, completion: { error in
+            if let error = error {
+                completion(error)
+            }
+            completion(nil)
+        })
+    }
+    func requestPasswordReset(completion: @escaping((Error?) -> Void)) {
+        if let email = Auth.auth().currentUser?.email {
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+                completion(error)
+            }
+            let error = NSError(domain: "de.craftcode.Wardrobe", code: 500, userInfo: ["NSLocalizedDescriptionKey": "No email found for this user."])
+            completion(error)
         }
     }
 }
