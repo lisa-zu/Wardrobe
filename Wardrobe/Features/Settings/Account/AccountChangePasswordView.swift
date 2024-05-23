@@ -86,7 +86,7 @@ struct AccountChangePasswordView: View {
                         Spacer()
                     }
                 })
-                .buttonStyle(PrimaryConfirmButton())
+                .buttonStyle(.primaryConfirm)
                 .disabled(validateNewPasswordInput())
             }
             .padding()
