@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     
+    @Environment(\.modelContext) private var modelContext
     @EnvironmentObject var authService: AuthService
     
     var body: some View {
         TabView {
+            OutfitPickerView()
+                .tabItem {
+                    Label("OUTFIT_PICKER", systemImage: "eyes")
+                }
             SettingsView()
                 .environmentObject(authService)
                 .tabItem {
@@ -23,5 +29,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView().environmentObject(AuthService())
+    ContentView()
+        .environmentObject(AuthService())
+        .modelContainer(for: WardrobeItem.self)
 }
