@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009E3C22BC42F7A00A1F827 /* SettingsView.swift */; };
+		30438F6E2BF90DCE00A9BDB9 /* OutfitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */; };
+		30438F702BF9117900A9BDB9 /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */; };
+		30438F742BF9124600A9BDB9 /* WardrobeItemPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F732BF9124600A9BDB9 /* WardrobeItemPickerView.swift */; };
 		304E4DA42BC6D7BF00C611D7 /* Features.plist in Resources */ = {isa = PBXBuildFile; fileRef = 304E4DA32BC6D7BF00C611D7 /* Features.plist */; };
 		304E4DA62BC6D80300C611D7 /* FeatureFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E4DA52BC6D80300C611D7 /* FeatureFlags.swift */; };
 		304E4DA92BC6D8BF00C611D7 /* Features.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304E4DA82BC6D8BF00C611D7 /* Features.swift */; };
@@ -43,6 +46,10 @@
 		309653D52BCAA092002952C9 /* SecondaryCancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309653D42BCAA092002952C9 /* SecondaryCancelButton.swift */; };
 		309653D82BCAA1B2002952C9 /* AccountChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309653D72BCAA1B2002952C9 /* AccountChangePasswordView.swift */; };
 		309653DA2BCAA386002952C9 /* PrimaryConfirmButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309653D92BCAA386002952C9 /* PrimaryConfirmButton.swift */; };
+		30A7E69C2BFA79AD00953F2E /* WardrobeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A7E69B2BFA79AD00953F2E /* WardrobeError.swift */; };
+		30DE26572BFA3F1900FF9829 /* WardrobeItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE26562BFA3F1900FF9829 /* WardrobeItemCategory.swift */; };
+		30DE26592BFA405A00FF9829 /* WardrobeItemSeason.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE26582BFA405A00FF9829 /* WardrobeItemSeason.swift */; };
+		30DE265B2BFA440C00FF9829 /* PrimaryConfirmButtonFullWidth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DE265A2BFA440C00FF9829 /* PrimaryConfirmButtonFullWidth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		3009E3C22BC42F7A00A1F827 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitPickerView.swift; sourceTree = "<group>"; };
+		30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItem.swift; sourceTree = "<group>"; };
+		30438F732BF9124600A9BDB9 /* WardrobeItemPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItemPickerView.swift; sourceTree = "<group>"; };
 		304E4DA32BC6D7BF00C611D7 /* Features.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Features.plist; sourceTree = "<group>"; };
 		304E4DA52BC6D80300C611D7 /* FeatureFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlags.swift; sourceTree = "<group>"; };
 		304E4DA82BC6D8BF00C611D7 /* Features.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Features.swift; sourceTree = "<group>"; };
@@ -95,6 +105,10 @@
 		309653D42BCAA092002952C9 /* SecondaryCancelButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryCancelButton.swift; sourceTree = "<group>"; };
 		309653D72BCAA1B2002952C9 /* AccountChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountChangePasswordView.swift; sourceTree = "<group>"; };
 		309653D92BCAA386002952C9 /* PrimaryConfirmButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryConfirmButton.swift; sourceTree = "<group>"; };
+		30A7E69B2BFA79AD00953F2E /* WardrobeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeError.swift; sourceTree = "<group>"; };
+		30DE26562BFA3F1900FF9829 /* WardrobeItemCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItemCategory.swift; sourceTree = "<group>"; };
+		30DE26582BFA405A00FF9829 /* WardrobeItemSeason.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItemSeason.swift; sourceTree = "<group>"; };
+		30DE265A2BFA440C00FF9829 /* PrimaryConfirmButtonFullWidth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryConfirmButtonFullWidth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +155,32 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		30438F6B2BF90DB900A9BDB9 /* Outfit */ = {
+			isa = PBXGroup;
+			children = (
+				30438F6C2BF90DC300A9BDB9 /* Picker */,
+			);
+			path = Outfit;
+			sourceTree = "<group>";
+		};
+		30438F6C2BF90DC300A9BDB9 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */,
+				30438F732BF9124600A9BDB9 /* WardrobeItemPickerView.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		304E4DA72BC6D8B700C611D7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				304E4DA82BC6D8BF00C611D7 /* Features.swift */,
 				304E4DAA2BC6DCD100C611D7 /* User.swift */,
+				30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */,
+				30DE26562BFA3F1900FF9829 /* WardrobeItemCategory.swift */,
+				30DE26582BFA405A00FF9829 /* WardrobeItemSeason.swift */,
+				30A7E69B2BFA79AD00953F2E /* WardrobeError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -225,6 +260,7 @@
 		3060F14F2BC2B06100C78882 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				30438F6B2BF90DB900A9BDB9 /* Outfit */,
 				3009E3C12BC42F6E00A1F827 /* Settings */,
 				3060F15D2BC2C79000C78882 /* Auth */,
 				3060F1582BC2BE1A00C78882 /* Signup */,
@@ -280,6 +316,7 @@
 			children = (
 				309653D22BCA9DC8002952C9 /* PrimaryDestructiveButton.swift */,
 				309653D42BCAA092002952C9 /* SecondaryCancelButton.swift */,
+				30DE265A2BFA440C00FF9829 /* PrimaryConfirmButtonFullWidth.swift */,
 				309653D92BCAA386002952C9 /* PrimaryConfirmButton.swift */,
 			);
 			path = Buttons;
@@ -445,16 +482,22 @@
 				309653CF2BCA9B7B002952C9 /* AccountDeletionView.swift in Sources */,
 				3060F15A2BC2BE2700C78882 /* SignupView.swift in Sources */,
 				309653C72BCA8E68002952C9 /* AccountInformationView.swift in Sources */,
+				30438F702BF9117900A9BDB9 /* WardrobeItem.swift in Sources */,
 				3060F14E2BC2AE2F00C78882 /* AuthService.swift in Sources */,
 				309653DA2BCAA386002952C9 /* PrimaryConfirmButton.swift in Sources */,
 				3060F10F2BC2A73D00C78882 /* ContentView.swift in Sources */,
 				3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */,
 				309653D82BCAA1B2002952C9 /* AccountChangePasswordView.swift in Sources */,
+				30DE265B2BFA440C00FF9829 /* PrimaryConfirmButtonFullWidth.swift in Sources */,
 				304E4DA62BC6D80300C611D7 /* FeatureFlags.swift in Sources */,
 				3060F15C2BC2C08700C78882 /* SignupViewModel.swift in Sources */,
+				30DE26572BFA3F1900FF9829 /* WardrobeItemCategory.swift in Sources */,
+				30A7E69C2BFA79AD00953F2E /* WardrobeError.swift in Sources */,
 				309653C92BCA9015002952C9 /* DataUsageSettingsView.swift in Sources */,
+				30438F742BF9124600A9BDB9 /* WardrobeItemPickerView.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
 				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
+				30DE26592BFA405A00FF9829 /* WardrobeItemSeason.swift in Sources */,
 				304E4DAB2BC6DCD100C611D7 /* User.swift in Sources */,
 				309653D32BCA9DC8002952C9 /* PrimaryDestructiveButton.swift in Sources */,
 				3060F15F2BC2C7F700C78882 /* AuthView.swift in Sources */,
@@ -462,6 +505,7 @@
 				3060F10D2BC2A73D00C78882 /* WardrobeApp.swift in Sources */,
 				304E4DA92BC6D8BF00C611D7 /* Features.swift in Sources */,
 				309653CB2BCA9042002952C9 /* AppearanceSettingsView.swift in Sources */,
+				30438F6E2BF90DCE00A9BDB9 /* OutfitPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

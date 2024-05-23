@@ -14,8 +14,12 @@ struct PrimaryConfirmButton: ButtonStyle {
         configuration.label
             .padding(.horizontal, 32)
             .padding(.vertical, 16)
-            .background(isEnabled ? Color.wardrobePrimary.opacity(1.0) : Color.wardrobePrimary.opacity(0.75))
+            .background(isEnabled ? Color.wardrobePrimary.opacity(1.0) : Color.wardrobePrimary.opacity(0.55))
             .foregroundStyle(.white)
             .clipShape(RoundedRectangle(cornerRadius: 16))
     }
+}
+
+extension ButtonStyle where Self == PrimaryConfirmButton {
+    static var primaryConfirm: Self { Self() }
 }
