@@ -6,10 +6,39 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct WardrobeItemView: View {
     
     let item: WardrobeItem
+    @Environment(\.modelContext) private var modelContext
+    @State private var showItemActions: Bool = false
+    
+    var actionButtons: some View {
+        HStack {
+            Button {
+                item.isFavorite.toggle()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    withAnimation(.linear(duration: 0.4)) {
+                        showItemActions = false
+                    }
+                }
+            } label: {
+                Image(systemName: item.isFavorite ? "heart.fill": "heart")
+                    .padding()
+                    .foregroundStyle(.regularMaterial)
+                    .background(.regularMaterial, in: Circle())
+            }
+            Button {
+                modelContext.delete(item)
+            } label: {
+                Image(systemName: "trash")
+                    .padding()
+                    .foregroundStyle(.regularMaterial)
+                    .background(.regularMaterial, in: Circle())
+            }
+        }
+    }
     
     var body: some View {
         if let imageData = item.image {
@@ -29,6 +58,24 @@ struct WardrobeItemView: View {
                     )
                     .offset(y: phase.isIdentity ? 0 : 50)
             }
+            .onLongPressGesture {
+                withAnimation(.linear(duration: 0.4)) {
+                    showItemActions.toggle()
+                }
+            }
+            .overlay {
+                if showItemActions {
+                    actionButtons
+                } else {
+                    EmptyView()
+                }
+            }
         }
     }
+}
+
+#Preview {
+    ContentView()
+        .environmentObject(AuthService())
+        .modelContainer(for: WardrobeItem.self)
 }
