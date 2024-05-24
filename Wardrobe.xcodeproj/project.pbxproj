@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3005B8A12C00F0F600A53B5D /* WardrobeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */; };
 		3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009E3C22BC42F7A00A1F827 /* SettingsView.swift */; };
 		30438F6E2BF90DCE00A9BDB9 /* OutfitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */; };
 		30438F702BF9117900A9BDB9 /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItemView.swift; sourceTree = "<group>"; };
 		3009E3C22BC42F7A00A1F827 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitPickerView.swift; sourceTree = "<group>"; };
 		30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItem.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				30438F6C2BF90DC300A9BDB9 /* Picker */,
+				3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */,
 			);
 			path = Outfit;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				30DE26572BFA3F1900FF9829 /* WardrobeItemCategory.swift in Sources */,
 				30A7E69C2BFA79AD00953F2E /* WardrobeError.swift in Sources */,
 				309653C92BCA9015002952C9 /* DataUsageSettingsView.swift in Sources */,
+				3005B8A12C00F0F600A53B5D /* WardrobeItemView.swift in Sources */,
 				30438F742BF9124600A9BDB9 /* WardrobeItemPickerView.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
 				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
