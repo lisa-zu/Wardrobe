@@ -11,8 +11,10 @@ struct WardrobeFiltersView: View {
     
     @Environment (\.dismiss) var dismiss
     @Binding var season: WardrobeItemSeason
+    @Binding var filterIsActive: Bool
     
-    init(season: Binding<WardrobeItemSeason>) {
+    init(isActive: Binding<Bool>, season: Binding<WardrobeItemSeason>) {
+        self._filterIsActive = isActive
         self._season = season
     }
     
@@ -26,6 +28,7 @@ struct WardrobeFiltersView: View {
                 }
                 .pickerStyle(.navigationLink)
             }
+            .scrollContentBackground(.hidden)
             .navigationTitle("FILTER")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -35,11 +38,29 @@ struct WardrobeFiltersView: View {
                         Text(LocalizedStringKey(stringLiteral: "CLOSE"))
                     }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        season = .autumn
+                        self.filterIsActive = false
+                    } label: {
+                        Text(LocalizedStringKey(stringLiteral: "RESET"))
+                            .foregroundStyle(filterIsActive ? .red : .accentColor)
+                    }
+                    .disabled(!filterIsActive)
+                }
+            }
+            .safeAreaInset(edge: .bottom) {
+                Button {
+                    self.filterIsActive = true
+                } label: {
+                    Text(LocalizedStringKey(stringLiteral: "APPLY"))
+                }
+                .buttonStyle(.primaryConfirmFullWidth)
             }
         }
     }
 }
 
 #Preview {
-    WardrobeFiltersView(season: .constant(.summer))
+    WardrobeFiltersView(isActive: .constant(false), season: .constant(.summer))
 }
