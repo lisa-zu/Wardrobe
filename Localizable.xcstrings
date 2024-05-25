@@ -92,6 +92,23 @@
         }
       }
     },
+    "CLOSE" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "CREATE" : {
       "localizations" : {
         "de" : {
@@ -209,6 +226,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Favorites"
+          }
+        }
+      }
+    },
+    "FILTER" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filter"
           }
         }
       }
