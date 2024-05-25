@@ -18,6 +18,7 @@ struct WardrobeItemPickerView: View {
     @State private var wardrobeItemSeason: WardrobeItemSeason = .spring
     @State private var wardrobeItemImage: PhotosPickerItem?
     @State private var wardrobeImage: Image?
+    @State private var isFavorite: Bool = false
     @State private var imageToEncode: UIImage?
     @State private var isLoading: Bool = false
     private var processingQueue = DispatchQueue(label: "ProcessingQueue")
@@ -61,6 +62,7 @@ struct WardrobeItemPickerView: View {
                                         }
                                     }
                                     .pickerStyle(.navigationLink)
+                                    Toggle("IS_FAVORITE", isOn: $isFavorite)
                                 }
                                 .scrollContentBackground(.hidden)
                                 Button {
@@ -155,7 +157,8 @@ struct WardrobeItemPickerView: View {
                 name: self.wardrobeItemTitle,
                 category: self.wardrobeItemCategory,
                 season: self.wardrobeItemSeason,
-                image: imageData
+                image: imageData,
+                isFavorite: isFavorite
             )
             modelContext.insert(newItem)
             handler(nil)

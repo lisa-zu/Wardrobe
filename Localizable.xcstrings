@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "de",
   "strings" : {
+    "·" : {
+
+    },
+    "%@" : {
+
+    },
     "CANCEL" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -191,6 +197,22 @@
     "ERROR_UNKNOWN" : {
       "comment" : "SORRY"
     },
+    "FAVORITES" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoriten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favorites"
+          }
+        }
+      }
+    },
     "Hello, World!" : {
 
     },
@@ -207,6 +229,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Invalid email address"
+          }
+        }
+      }
+    },
+    "IS_FAVORITE" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als Favorit markieren"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark as favorite"
           }
         }
       }
@@ -410,6 +448,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "New item"
+          }
+        }
+      }
+    },
+    "NO_FAVORITES" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier gibt es nichts."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "There's nothing here."
+          }
+        }
+      }
+    },
+    "NO_FAVORITES_DESCRIPTION" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kannst jederzeit Kleidungsstücke als Favoriten hinzufügen. Drücke dafür einfach lang auf ein Kleidungsstück und danach auf das ❤️."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can favorite any wardrobe item anytime you want. Just head over to your list, long press on any item and hit the ❤️."
           }
         }
       }

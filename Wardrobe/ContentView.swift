@@ -19,6 +19,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("OUTFIT_PICKER", systemImage: "eyes")
                 }
+            FavoritesView()
+                .tabItem {
+                    Label("FAVORITES", systemImage: "heart")
+                }
             SettingsView()
                 .environmentObject(authService)
                 .tabItem {

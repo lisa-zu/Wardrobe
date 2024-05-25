@@ -17,27 +17,11 @@ struct OutfitPickerView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                // TOP SCROLL VIEW
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(items.filter { $0.category.position == "POSITION_TOP" }) { item in
-                            if let imageData = item.image {
-                                VStack {
-                                    Image(uiImage: UIImage(data: imageData) ?? UIImage())
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    Text(item.name)
-                                }
-                                .containerRelativeFrame(.horizontal, count: 1, spacing: 16.0)
-                                .scrollTransition { content, phase in
-                                    content
-                                        .opacity(phase.isIdentity ? 1.0 : 0.2)
-                                        .scaleEffect(
-                                            x: phase.isIdentity ? 1.0 : 0.75,
-                                            y: phase.isIdentity ? 1.0 : 0.75
-                                        )
-                                        .offset(y: phase.isIdentity ? 0 : 50)
-                                }
-                            }
+                            WardrobeItemView(item: item)
                         }
                     }
                     .scrollTargetLayout()
@@ -47,27 +31,11 @@ struct OutfitPickerView: View {
                 .scrollTargetBehavior(.viewAligned)
                 .scrollIndicators(.hidden)
                 
+                // MIDDLE SCROLL VIEW
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(items.filter { $0.category.position == "POSITION_MIDDLE" }) { item in
-                            if let imageData = item.image {
-                                VStack {
-                                    Image(uiImage: UIImage(data: imageData) ?? UIImage())
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    Text(item.name)
-                                }
-                                .containerRelativeFrame(.horizontal, count: 1, spacing: 16.0)
-                                .scrollTransition { content, phase in
-                                    content
-                                        .opacity(phase.isIdentity ? 1.0 : 0.2)
-                                        .scaleEffect(
-                                            x: phase.isIdentity ? 1.0 : 0.75,
-                                            y: phase.isIdentity ? 1.0 : 0.75
-                                        )
-                                        .offset(y: phase.isIdentity ? 0 : 50)
-                                }
-                            }
+                            WardrobeItemView(item: item)
                         }
                     }
                     .scrollTargetLayout()
@@ -77,27 +45,11 @@ struct OutfitPickerView: View {
                 .scrollTargetBehavior(.viewAligned)
                 .scrollIndicators(.hidden)
                 
+                // BOTTOM SCROLL VIEW
                 ScrollView(.horizontal) {
                     HStack {
                         ForEach(items.filter { $0.category.position == "POSITION_BOTTOM" }) { item in
-                            if let imageData = item.image {
-                                VStack {
-                                    Image(uiImage: UIImage(data: imageData) ?? UIImage())
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    Text(item.name)
-                                }
-                                .containerRelativeFrame(.horizontal, count: 1, spacing: 16.0)
-                                .scrollTransition { content, phase in
-                                    content
-                                        .opacity(phase.isIdentity ? 1.0 : 0.2)
-                                        .scaleEffect(
-                                            x: phase.isIdentity ? 1.0 : 0.75,
-                                            y: phase.isIdentity ? 1.0 : 0.75
-                                        )
-                                        .offset(y: phase.isIdentity ? 0 : 50)
-                                }
-                            }
+                            WardrobeItemView(item: item)
                         }
                     }
                     .scrollTargetLayout()
