@@ -9,37 +9,37 @@ import SwiftUI
 
 struct WardrobeFiltersView: View {
     
-    let filterType: FilterType
+    @Environment (\.dismiss) var dismiss
+    @Binding var season: WardrobeItemSeason
     
-    init(for type: FilterType) {
-        self.filterType = type
+    init(season: Binding<WardrobeItemSeason>) {
+        self._season = season
     }
     
     var body: some View {
         NavigationStack {
-            Group {
-                switch filterType {
-                case .wardrobe:
-                    wardrobeFilter
-                case .favorites:
-                    favoritesFilter
+            Form {
+                Picker("PICK_SEASON", selection: $season) {
+                    ForEach(WardrobeItemSeason.allCases) { _season in
+                        Text(LocalizedStringKey(stringLiteral: _season.rawValue))
+                    }
                 }
+                .pickerStyle(.navigationLink)
             }
             .navigationTitle("FILTER")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text(LocalizedStringKey(stringLiteral: "CLOSE"))
+                    }
+                }
+            }
         }
-    }
-    
-    var wardrobeFilter: some View {
-        Form {
-            
-        }
-    }
-    
-    var favoritesFilter: some View {
-        Form {}
     }
 }
 
 #Preview {
-    WardrobeFiltersView(for: .favorites)
+    WardrobeFiltersView(season: .constant(.summer))
 }
