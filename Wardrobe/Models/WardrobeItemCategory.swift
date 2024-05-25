@@ -8,6 +8,7 @@
 import Foundation
 
 enum WardrobeItemCategory: String, Codable, CaseIterable, Identifiable {
+    case all = "CATEGORY_ALL"
     case top = "CATEGORY_TOP"
     case pants = "CATEGORY_PANTS"
     case dress = "CATEGORY_DRESS"
@@ -27,6 +28,8 @@ enum WardrobeItemCategory: String, Codable, CaseIterable, Identifiable {
             return "POSITION_MIDDLE"
         case .shoes:
             return "POSITION_BOTTOM"
+        default:
+            return "POSITION_UNDEFINED"
         }
     }
 

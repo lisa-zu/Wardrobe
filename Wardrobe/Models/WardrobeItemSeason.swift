@@ -8,6 +8,7 @@
 import Foundation
 
 enum WardrobeItemSeason: String, Codable, CaseIterable, Identifiable {
+    case all = "SEASON_ALL"
     case spring = "SEASON_SPRING"
     case summer = "SEASON_SUMMER"
     case autumn = "SEASON_AUTUMN"
