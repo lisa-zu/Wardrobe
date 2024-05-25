@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3005B8A12C00F0F600A53B5D /* WardrobeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */; };
+		3005B8A42C00F90D00A53B5D /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3005B8A32C00F90D00A53B5D /* FavoritesView.swift */; };
 		3009E3C32BC42F7A00A1F827 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3009E3C22BC42F7A00A1F827 /* SettingsView.swift */; };
 		30438F6E2BF90DCE00A9BDB9 /* OutfitPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */; };
 		30438F702BF9117900A9BDB9 /* WardrobeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItemView.swift; sourceTree = "<group>"; };
+		3005B8A32C00F90D00A53B5D /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		3009E3C22BC42F7A00A1F827 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		30438F6D2BF90DCE00A9BDB9 /* OutfitPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutfitPickerView.swift; sourceTree = "<group>"; };
 		30438F6F2BF9117900A9BDB9 /* WardrobeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WardrobeItem.swift; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3005B8A22C00F90100A53B5D /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				3005B8A32C00F90D00A53B5D /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		3009E3C12BC42F6E00A1F827 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +170,7 @@
 		30438F6B2BF90DB900A9BDB9 /* Outfit */ = {
 			isa = PBXGroup;
 			children = (
+				3005B8A22C00F90100A53B5D /* Favorites */,
 				30438F6C2BF90DC300A9BDB9 /* Picker */,
 				3005B8A02C00F0F600A53B5D /* WardrobeItemView.swift */,
 			);
@@ -501,6 +512,7 @@
 				30438F742BF9124600A9BDB9 /* WardrobeItemPickerView.swift in Sources */,
 				3060F1522BC2B07300C78882 /* LoginView.swift in Sources */,
 				3060F1572BC2B8F400C78882 /* Color.swift in Sources */,
+				3005B8A42C00F90D00A53B5D /* FavoritesView.swift in Sources */,
 				30DE26592BFA405A00FF9829 /* WardrobeItemSeason.swift in Sources */,
 				304E4DAB2BC6DCD100C611D7 /* User.swift in Sources */,
 				309653D32BCA9DC8002952C9 /* PrimaryDestructiveButton.swift in Sources */,
